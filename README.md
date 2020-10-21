@@ -1,4 +1,4 @@
-# Stock_DRL
+# Framework for DQN/DDQN showcase on stock trading
 Using Deep reinforcement learning (DRL) agent to learn from historical data.
 
 This framework can be used for other real life problem with environment setup to replace on StockMarketEnv() function. 
