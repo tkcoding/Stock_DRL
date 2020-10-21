@@ -18,6 +18,6 @@ pip3 install torchvision
 ```
 
 # Results
-[!DQN Image](assets/DQN_Reward.png)
+![DQN Image](assets/DQN_Reward.png)
 
 # Next Step
