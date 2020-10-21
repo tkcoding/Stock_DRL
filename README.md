@@ -16,3 +16,8 @@ go to the official website: http://pytorch.org/
 pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-win_amd64.whl 
 pip3 install torchvision
 ```
+
+# Results
+[!DQN Image]('assets/DQN_Reward.png')
+
+# Next Step
