@@ -37,4 +37,6 @@ DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 
 ```
 1. Using saved model from DQN or DDQN to load multiple different stock with train and test set in Malaysia KLSE stock market as reference - estimated completion by November15 2020
 2. Implement prioritized replay and dueling DQN as benchmark - estimated completion by December 1st 2020
+3. Current action is on discrete state 0 for hold , 1 for buy and 2 for sell call - Using DQN . Transition to Policy Gradient for continuous action space -  estimated completion by January 1st 2021.
+  b. Will upload Policy Gradient code in Policy Gradient in Policy_Gradient folder for future development.
 ```
