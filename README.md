@@ -25,7 +25,7 @@ pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-win_amd6
 pip3 install torchvision
 ```
 
-# Results
+### Results
 
 Deep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 1500 episodes.
 ![DQN Image](assets/DQN_Reward.png)
@@ -33,7 +33,7 @@ Deep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 1500 e
 DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 1500 episodes.
 ![DDQN Image](assets/DDQN_Reward_graph.png)
 
-# Next Step
+### Next Step
 ```
 1. Using saved model from DQN or DDQN to load multiple different stock with train and test set in Malaysia KLSE stock market as reference - estimated completion by November15 2020
 2. Implement prioritized replay and dueling DQN as benchmark - estimated completion by December 1st 2020
@@ -41,11 +41,10 @@ DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 
   b. Will upload Policy Gradient code in Policy Gradient in Policy_Gradient folder for future development.
 ```
 
-# Introduction
 
-This notebook demonstrates how to use Deep Reinforcement Learning (DRL) for optimizing the execution of large portfolio transactions. We begin with a brief review of reinforcement learning and actor-critic methods.  Then, you will use an actor-critic method to generate optimal trading strategies that maximize profit when liquidating a block of shares. 
+## Deal with continuous space (Taken from udacity deep learning notebook)
 
-# Actor-Critic Methods
+### Actor-Critic Methods
 
 In reinforcement learning, an agent makes observations and takes actions within an environment, and in return it receives rewards. Its objective is to learn to act in a way that will maximize its expected long-term rewards. 
 
