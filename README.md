@@ -40,3 +40,37 @@ DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 
 3. Current action is on discrete state 0 for hold , 1 for buy and 2 for sell call - Using DQN . Transition to Policy Gradient for continuous action space -  estimated completion by January 1st 2021.
   b. Will upload Policy Gradient code in Policy Gradient in Policy_Gradient folder for future development.
 ```
+
+# Introduction
+
+This notebook demonstrates how to use Deep Reinforcement Learning (DRL) for optimizing the execution of large portfolio transactions. We begin with a brief review of reinforcement learning and actor-critic methods.  Then, you will use an actor-critic method to generate optimal trading strategies that maximize profit when liquidating a block of shares. 
+
+# Actor-Critic Methods
+
+In reinforcement learning, an agent makes observations and takes actions within an environment, and in return it receives rewards. Its objective is to learn to act in a way that will maximize its expected long-term rewards. 
+
+<br>
+<figure>
+  <img src = "./text_images/RL.png" width = 80% style = "border: thin silver solid; padding: 10px">
+      <figcaption style = "text-align: center; font-style: italic">Fig 1. - Reinforcement Learning.</figcaption>
+</figure> 
+<br>
+
+There are several types of RL algorithms, and they can be divided into three groups:
+
+- **Critic-Only**: Critic-Only methods, also known as Value-Based methods, first find the optimal value function and then derive an optimal policy from it. 
+
+
+- **Actor-Only**: Actor-Only methods, also known as Policy-Based methods, search directly for the optimal policy in policy space. This is typically done by using a parameterized family of policies over which optimization procedures can be used directly. 
+
+
+- **Actor-Critic**: Actor-Critic methods combine the advantages of actor-only and critic-only methods. In this method, the critic learns the value function and uses it to determine how the actor's policy parramerters should be changed. In this case, the actor brings the advantage of computing continuous actions without the need for optimization procedures on a value function, while the critic supplies the actor with knowledge of the performance. Actor-critic methods usually have good convergence properties, in contrast to critic-only methods.  The **Deep Deterministic Policy Gradients (DDPG)** algorithm is one example of an actor-critic method.
+
+<br>
+<figure>
+  <img src = "./text_images/Actor-Critic.png" width = 80% style = "border: thin silver solid; padding: 10px">
+      <figcaption style = "text-align: center; font-style: italic">Fig 2. - Actor-Critic Reinforcement Learning.</figcaption>
+</figure> 
+<br>
+
+In this notebook, we will use DDPG to determine the optimal execution of portfolio transactions. In other words, we will use the DDPG algorithm to solve the optimal liquidation problem. But before we can apply the DDPG algorithm we first need to formulate the optimal liquidation problem so that in can be solved using reinforcement learning. In the next section we will see how to do this. 
