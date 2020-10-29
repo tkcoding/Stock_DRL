@@ -51,7 +51,7 @@ In reinforcement learning, an agent makes observations and takes actions within 
 
 <br>
 <figure>
-  <img src = "./text_images/RL.png" width = 80% style = "border: thin silver solid; padding: 10px">
+  <img src = "./assets/RL.png" width = 80% style = "border: thin silver solid; padding: 10px">
       <figcaption style = "text-align: center; font-style: italic">Fig 1. - Reinforcement Learning.</figcaption>
 </figure> 
 <br>
@@ -68,7 +68,7 @@ There are several types of RL algorithms, and they can be divided into three gro
 
 <br>
 <figure>
-  <img src = "./text_images/Actor-Critic.png" width = 80% style = "border: thin silver solid; padding: 10px">
+  <img src = "./assets/Actor-Critic.png" width = 80% style = "border: thin silver solid; padding: 10px">
       <figcaption style = "text-align: center; font-style: italic">Fig 2. - Actor-Critic Reinforcement Learning.</figcaption>
 </figure> 
 <br>
