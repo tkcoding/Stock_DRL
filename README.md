@@ -1,9 +1,36 @@
-# Framework for DQN/DDQN showcase on stock trading
+# Framework for Deep Reinforcement Learning on Stock Market Environment
 Using Deep reinforcement learning (DRL) agent to learn from historical data.
 
 This framework can be used for other real life problem with environment setup to replace on StockMarketEnv() function. 
 Please feel free to use it for your own use cases.
 
+### Basics to consider during stock purchase decision in terms of DRL.
+
+Training an reinforcement learning framework require understanding of both technical details of finance and method can be used in RL to churn out decent RL.
+
+<br>
+<figure>
+  <img src = "./assets/RL.png" width = 80% style = "border: thin silver solid; padding: 10px">
+      <figcaption style = "text-align: center; font-style: italic">Fig 1. - Reinforcement Learning.</figcaption>
+</figure> 
+<br>
+
+Basic such as reinforcement learning require setup from agent (just like traders or mastermind) , observations (state for example like trading volume,news sentiment and other important factors) and lastly the action (buy and sell as discrete action - __easiest__ to number of share to buy and sell as continuous space - __hardest__)
+
+
+### Outline for stock DRL 
+The approach we are taking to continuous improve this repo by introducing stages by stages improvement as author getting more work done:
+1. Using DQN (Deep Q-Network) to start off with continuous state space, keeping discrete action space (buy and sell call only , consider like binary state)
+2. Using DDPG (Deep Deterministic Policy Gradient) to deal with continuous state and action space (buy and sell call with volume)
+
+```
+WHY NOT Q-Learning?????
+
+Q-learning tabular method will not be cover in this repository as author think it's not feasible for stock trading activites due to:
+1. Q-learning alone is unable to cope the continuous state and action space due to the nature of finite MDP.
+```
+
+### Deep Q-Network for continuous state space and discrete action space
 To learn more about the differences between DQN and DDQN Minh et al. 2015 : https://arxiv.org/pdf/1509.06461.pdf
 
 Credit to developer at Kaggle for the initial written logic: https://www.kaggle.com/itoeiji/deep-reinforcement-learning-on-stock-data
@@ -33,6 +60,7 @@ Deep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 1500 e
 DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 1500 episodes.
 ![DDQN Image](assets/DDQN_Reward_graph.png)
 
+
 ### Next Step
 ```
 1. Using saved model from DQN or DDQN to load multiple different stock with train and test set in Malaysia KLSE stock market as reference - estimated completion by November15 2020
@@ -42,18 +70,19 @@ DoubleDeep Q-Network runs on BAUTO stock in KLSE (Malaysia Stock Exchange) over 
 ```
 
 
-## Deal with continuous space (Taken from udacity deep learning notebook)
+## Deterministic Deep Policy Gradient (Actor-Critic Method) for both state and action to be continuous space (buy and sell with volume)
 
-### Actor-Critic Methods
+__Author still working on this part. Please stay tune as author weekly update as he learnt through the method__
+
+In actor-critic method , policy gradient method has been deployed to use for both actor and critic agent. Understanding policy gradient and information behind this technique is crucial for us to use in our project.
+Below are some of the resources that could help in policy gradient understanding before going into actor critic:
+* math  behind policy gradient - http://machinelearningmechanic.com/deep_learning/reinforcement_learning/2019/12/06/a_mathematical_introduction_to_policy_gradient.html
+* Detail explanation on policy gradient and how it links to actor and critic - https://deepmind.com/learning-resources/-introduction-reinforcement-learning-david-silver
+
 
 In reinforcement learning, an agent makes observations and takes actions within an environment, and in return it receives rewards. Its objective is to learn to act in a way that will maximize its expected long-term rewards. 
 
-<br>
-<figure>
-  <img src = "./assets/RL.png" width = 80% style = "border: thin silver solid; padding: 10px">
-      <figcaption style = "text-align: center; font-style: italic">Fig 1. - Reinforcement Learning.</figcaption>
-</figure> 
-<br>
+
 
 There are several types of RL algorithms, and they can be divided into three groups:
 
